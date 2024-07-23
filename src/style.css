@@ -22,6 +22,8 @@ img {
   position: relative;
   padding: 1.5rem;
   box-shadow: 2px 2px 4px lightgrey, 2px 2px 4px lightgrey;
+  /* min-width: 545px; */
+  min-width: 40vw;
 }
 
 .about-image {
@@ -63,6 +65,10 @@ img {
   bottom: 25px;
 }
 
+.about-image > img {
+  object-fit: cover;
+}
+
 i:hover {
   cursor: pointer;
 }
@@ -80,14 +86,21 @@ i:hover {
 .project {
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 2px 4px lightgrey;
+  box-shadow: 2px 2px 5px lightgrey;
   padding: 2rem 2rem 2rem 0;
 }
 
 footer {
   background-color: rgb(181, 237, 255);
+  min-width: 100vw;
+}
+
+.contact-content {
   display: flex;
+  flex-wrap: wrap;
+  flex: 1;
   justify-content: center;
+  align-items: center;
   gap: 30px;
   padding: 2.5rem;
 }
@@ -122,4 +135,58 @@ footer {
 
 .project-title, .project-desc {
   padding-left: 1rem;
+}
+
+@media (max-width: 845px) {
+  .contact-content {
+    justify-content: start;
+  }
+}
+
+@media (max-width: 950px) {
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .about-text, .about-title {
+    margin: 30px;
+  }
+  .about-info {
+    flex: 1;
+  }
+}
+
+@media(max-width: 370px) {
+  .contact-content {
+    padding: 1rem;
+  }
+  .projects {
+    margin: 1.5rem;
+  }
+}
+
+@media(max-width: 340px) {
+  .contact-content {
+    padding: .5rem;
+  }
+  .projects {
+    margin: 1rem;
+  }
+}
+
+@media(max-width: 330px) {
+  .contact-content {
+    padding: .25rem;
+  }
+  .projects {
+    margin: .75rem;
+  }
+}
+
+@media(max-width: 320px) {
+  .contact-content {
+    padding: .1rem;
+  }
 }
