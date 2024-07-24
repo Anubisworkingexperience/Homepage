@@ -10,7 +10,8 @@ body {
 
 img{
   width: 300px;
-  height: auto;
+  height: 300px;
+  aspect-ratio: auto;
 }
 
 .about {
@@ -66,6 +67,7 @@ img{
 
 .about-image > img {
   object-fit: cover;
+  aspect-ratio: auto;
 }
 
 i:hover {
@@ -115,9 +117,16 @@ footer {
   gap: 25px;
 }
 
+.about-image img, .contact-content img {
+  width: 300px;
+  height: 300px;
+  aspect-ratio: auto;
+}
+
 .project > picture > img{
   width: 100%;
   height: auto;
+  aspect-ratio: auto;
 }
 
 .project-title {
