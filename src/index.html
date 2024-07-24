@@ -5,13 +5,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Homepage project to practice responsive design. Contains simple boilerplate text instead of real information">
   <title>Homepage</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://kit.fontawesome.com/6d320446ce.js" crossorigin="anonymous"></script>
+  <!-- Load essential styles, preload others -->
+  <style type="text/css">
+      body {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      margin: 0;
+    }
+
+    img{
+      width: 300px;
+      height: auto;
+    }
+
+    .about {
+      display: flex;
+      font-size: 1.1rem;
+    }
+
+    .about-info {
+      position: relative;
+      padding: 1.5rem;
+      box-shadow: 2px 2px 4px lightgrey, 2px 2px 4px lightgrey;
+      min-width: 40vw;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .name {
+      position: absolute;
+      bottom: 5px;
+      left: 20px;
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .name, .work-title, .contact-title, .about-title {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .work-title, .contact-title {
+      font-size: 1.5rem;
+    }
+
+    .contact-title {
+      margin: 0;
+    }
+
+    .about-links, .social-links {
+      display: flex;
+      gap: 15px;
+      font-size: 1.5rem;
+    }
+
+    .about-links { 
+      position: absolute;
+      right: 40px;
+      bottom: 25px;
+    }
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .projects, .about {
+      margin: 3rem;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 2px 2px 5px lightgrey;
+      padding: 2rem 2rem 2rem 0;
+    }
+
+    footer {
+      background-color: rgb(181, 237, 255);
+      min-width: 100vw;
+    }
+
+    .contact-content {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 2.5rem;
+    }
+
+    .phone, .email {
+      display: flex;
+      gap: 10px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .project > picture > img{
+      width: 100%;
+      height: auto;
+    }
+
+    .project-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 20px;
+      font-size: 1.1rem;
+    }
+
+    .project-title, .project-desc {
+      padding-left: 1rem;
+    }
+  </style>
+  <link rel="preload" href="./style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./style.css"></noscript>
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://ka-f.fontawesome.com">
 </head>
 <body>
   <section class="about">
     <div class="about-image">
-      <img src="./assets/astronaut.jpg" alt="astronaut">
+      <picture>
+        <source srcset="./assets/avif/astronaut.avif" type="image/avif" />
+        <source srcset="./assets/webp/astronaut.webp" type="image/webp" />
+        <img src="./assets/jpg/astronaut.jpg" alt="astronaut" />
+      </picture>
       <h1 class="name">Kirill Taskaev</h1>
     </div>
     <div class="about-info">
@@ -29,7 +164,11 @@
     <h2 class="work-title">My work</h2>
     <div class="projects-container">
       <div class="project">
-        <img src="./assets/solar-panel.jpg" alt="solar panels">
+        <picture>
+          <source srcset="./assets/avif/solar-panel.avif" type="image/avif" />
+          <source srcset="./assets/webp/solar-panel.webp" type="image/webp" />
+          <img src="./assets/jpg/solar-panel.jpg" alt="solar panel" />
+        </picture>
         <div class="project-title">
           <h3>Project1</h3>
           <div class="project-links">
@@ -42,7 +181,11 @@
             </div>
       </div>
     <div class="project">
-      <img src="./assets/computer.jpg" alt="early macintosh">
+      <picture>
+        <source srcset="./assets/avif/computer.avif" type="image/avif" />
+        <source srcset="./assets/webp/computer.webp" type="image/webp" />
+        <img src="./assets/jpg/computer.jpg" alt="early macintosh computer" />
+      </picture>
       <div class="project-title">
         <h3>Project2</h3>
         <div class="project-links">
@@ -54,7 +197,11 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit, ipsum sed congue accumsan, sapien sapien laoreet massa, vitae commodo est ipsum vel purus. Aliquam ante sapien, tristique vel sagittis et, viverra id ligula.</div>
     </div>
     <div class="project">
-      <img src="./assets/car.jpg" alt="electric car">
+      <picture>
+        <source srcset="./assets/avif/car.avif" type="image/avif" />
+        <source srcset="./assets/webp/car.webp" type="image/webp" />
+        <img src="./assets/jpg/car.jpg" alt="electric car" />
+      </picture>
       <div class="project-title">
         <h3>Project3</h3>
         <div class="project-links">
@@ -66,7 +213,11 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit, ipsum sed congue accumsan, sapien sapien laoreet massa, vitae commodo est ipsum vel purus. Aliquam ante sapien, tristique vel sagittis et, viverra id ligula.</div>
     </div>
     <div class="project">
-      <img src="./assets/building.jpg" alt="sci-fi bulding">
+      <picture>
+        <source srcset="./assets/avif/building.avif" type="image/avif" />
+        <source srcset="./assets/webp/building.webp" type="image/webp" />
+        <img src="./assets/jpg/building.jpg" alt="sci-fi building" />
+      </picture>
       <div class="project-title">
         <h3>Project4</h3>
         <div class="project-links">
@@ -78,7 +229,11 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit, ipsum sed congue accumsan, sapien sapien laoreet massa, vitae commodo est ipsum vel purus. Aliquam ante sapien, tristique vel sagittis et, viverra id ligula.</div>
     </div>
     <div class="project">
-      <img src="./assets/rockets.jpg" alt="rockets">
+      <picture>
+        <source srcset="./assets/avif/rockets.avif" type="image/avif" />
+        <source srcset="./assets/webp/rockets.webp" type="image/webp" />
+        <img src="./assets/jpg/rockets.jpg" alt="rockets" />
+      </picture>
       <div class="project-title">
         <h3>Project5</h3>
         <div class="project-links">
@@ -90,7 +245,11 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit, ipsum sed congue accumsan, sapien sapien laoreet massa, vitae commodo est ipsum vel purus. Aliquam ante sapien, tristique vel sagittis et, viverra id ligula.</div>
     </div>
     <div class="project">
-      <img src="./assets/cpu.jpg" alt="cpu">
+      <picture>
+        <source srcset="./assets/avif/cpu.avif" type="image/avif" />
+        <source srcset="./assets/webp/cpu.webp" type="image/webp" />
+        <img src="./assets/jpg/cpu.jpg" alt="cpu" />
+      </picture>
       <div class="project-title">
         <h3>Project6</h3>
         <div class="project-links">
@@ -122,8 +281,13 @@
           <i class="fa-brands fa-twitter"></i>
         </div>
       </div>
-      <img src="./assets/astronaut3.webp" alt="astronaut suit">
+      <picture>
+        <source srcset="./assets/avif/astronaut2.avif" type="image/avif" />
+        <source srcset="./assets/webp/astronaut2.webp" type="image/webp" />
+        <img src="./assets/jpg/astronaut2.jpg" alt="astronaut suit" />
+      </picture>
     </div>
   </footer>
+  <script src="https://kit.fontawesome.com/6d320446ce.js" crossorigin="anonymous"></script>
 </body>
 </html>

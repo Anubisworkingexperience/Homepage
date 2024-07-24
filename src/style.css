@@ -8,7 +8,7 @@ body {
   margin: 0;
 }
 
-img {
+img{
   width: 300px;
   height: auto;
 }
@@ -22,7 +22,6 @@ img {
   position: relative;
   padding: 1.5rem;
   box-shadow: 2px 2px 4px lightgrey, 2px 2px 4px lightgrey;
-  /* min-width: 545px; */
   min-width: 40vw;
 }
 
@@ -116,7 +115,7 @@ footer {
   gap: 25px;
 }
 
-.project > img {
+.project > picture > img{
   width: 100%;
   height: auto;
 }
@@ -188,5 +187,20 @@ footer {
 @media(max-width: 320px) {
   .contact-content {
     padding: .1rem;
+  }
+}
+
+@media(max-width: 1280px) {
+  .about-text {
+    margin: 30px;
+  }
+}
+
+
+@media (max-width: 1280px) {
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
